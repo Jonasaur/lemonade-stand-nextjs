@@ -1,2 +1,62 @@
-@import "tailwindcss";
+/* app/globals.css */
 
+:root {
+  --lemon-yellow: #f9d71c;
+  --dark-bg: #1a1a1a;
+  --text-main: #333333;
+  --border-color: #222222;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: var(--font-geist-sans), sans-serif;
+  background-color: #fcfcfc;
+  color: var(--text-main);
+  line-height: 1.6;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  color: var(--dark-bg);
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--dark-bg);
+}
+
+h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+a:hover {
+  color: var(--lemon-yellow);
+}
+
+main {
+  min-height: calc(100vh - 70px); 
+}
+
+button {
+  font-family: inherit;
+}

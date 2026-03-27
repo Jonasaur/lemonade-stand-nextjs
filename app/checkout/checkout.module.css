@@ -1,0 +1,118 @@
+.container {
+  max-width: 600px;
+  margin: 4rem auto;
+  padding: 2rem;
+}
+
+.receipt {
+  background: white;
+  border: 2px solid #222;
+  padding: 2rem;
+  border-radius: 4px;
+  box-shadow: 10px 10px 0px #f9d71c; /* Yellow shadow for that vibe */
+}
+
+.itemRow {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  font-family: var(--font-geist-mono), monospace;
+}
+
+.itemLemons {
+  font-size: 0.8rem;
+  color: #666;
+  margin-left: 10px;
+}
+
+.divider {
+  border-top: 2px dashed #eee;
+  margin: 1.5rem 0;
+}
+
+.totalRow {
+  display: flex;
+  justify-content: space-between;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.grandTotal {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin-top: 0.5rem;
+}
+
+.actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.confirmBtn {
+  flex: 2;
+  background: #222;
+  color: #f9d71c;
+  border: none;
+  padding: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.clearBtn {
+  flex: 1;
+  background: transparent;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  color: #999;
+}
+
+.backLink {
+  display: inline-block;
+  margin-top: 1rem;
+  text-decoration: underline;
+}
+
+.emptyContainer {
+  text-align: center;
+  margin-top: 10rem;
+}
+
+.itemDetails {
+  display: flex;
+  flex-direction: column;
+}
+
+.itemSubtext {
+  font-size: 0.75rem;
+  color: #888;
+  font-style: italic;
+}
+
+.expenseRow {
+  display: flex;
+  justify-content: space-between;
+  color: #e63946; 
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  font-family: var(--font-geist-mono), monospace;
+}
+
+.profitEstimate {
+  margin-top: 1.5rem;
+  padding: 0.75rem;
+  background: #f1f8e9; 
+  border-radius: 4px;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #2e7d32;
+}
+
+.title {
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}

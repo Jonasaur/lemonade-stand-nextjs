@@ -1,35 +1,42 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 interface CartItem {
-    id: string;
-    name: string;
-    price: number;
-    lemonCost: number;
+  id: string;
+  name: string;
+  price: number;
+  lemonCost: number;
+  profit: number;
 }
 
 interface CartState {
-    items: CartItem[];
+  items: CartItem[];
+  lifetimeProfit: number; 
 }
 
 const initialState: CartState = {
-    items: [],
+  items: [],
+  lifetimeProfit: 0,
 };
 
-const cartSlice = createSlice({
-    name: "cart",
-    initialState,
-    reducers: {
-        addToCart: (state, action: PayloadAction<CartItem>) => {
-            state.items.push(action.payload);
-        },
-        removeFromCart: (state, action: PayloadAction<string>) => {
-            state.items = state.items.filter(item => item.id !== action.payload);
-        },
-         clearCart: (state) => {
-            state.items = [];
-        },  
+export const cartSlice = createSlice({
+  name: "cart",
+  initialState,
+  reducers: {
+    addToCart: (state, action: PayloadAction<CartItem>) => {
+      state.items.push(action.payload);
     },
+    checkoutOrder: (state) => {
+      const sessionProfit = state.items.reduce((acc, item) => acc + item.profit, 0);
+      
+      state.lifetimeProfit = parseFloat((state.lifetimeProfit + sessionProfit).toFixed(2));
+      
+      state.items = [];
+    },
+    clearCart: (state) => {
+      state.items = [];
+    }
+  },
 });
 
-export const { addToCart, removeFromCart, clearCart } = cartSlice.actions;
+export const { addToCart, checkoutOrder, clearCart } = cartSlice.actions;
 export default cartSlice.reducer;

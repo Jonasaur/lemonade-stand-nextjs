@@ -9,7 +9,7 @@ export default function Home() {
       </div>
       <div className={styles.menuBackground}>
         <div className={styles.linkWrapper}>
-          <Link href="/shop">Carte</Link>
+          <Link href="/shop">La Carte</Link>
           <Link href="/checkout">Le Checkout</Link>
         </div>
       </div>

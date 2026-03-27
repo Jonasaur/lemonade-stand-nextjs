@@ -1,0 +1,33 @@
+.shopContainer {
+  padding: 2rem;
+  background-color: #f4f4f4;
+  min-height: 100vh;
+  background-image: url(@/public/lemons.svg);
+  text-align: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* DrinkCard.module.css snippets */
+.menuWrapper {
+  margin-top: 2rem;
+  background-color: #fff;
+  width: fit-content;
+  margin: auto;
+  padding: 4rem;
+  border: #000 5px solid;
+}
+
+.cardWrapper {
+  padding: 1.5rem 2rem;
+  border: 3px dashed #000;
+}
+
+
+
